@@ -16,4 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/webhook', lineRouter);
 
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
+
 module.exports = app;
