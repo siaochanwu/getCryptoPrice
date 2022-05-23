@@ -48,7 +48,7 @@ function pushMSG() {
     .catch((err) => console.error(err))
 }
 
-const job = schedule.scheduleJob('0 30 * * * *', function(){
+const job = schedule.scheduleJob('0 * * * * *', function(){
     console.log('The answer to life, the universe, and everything!');
     pushMSG();
   });
