@@ -20,6 +20,8 @@ function pushMSG() {
         channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
     });
 
+    res.status(200).send('connect');
+
     axios({
         url: `${process.env.COIN_API}?filter_asset_id=BTC,ETH`,
         method: 'get',
